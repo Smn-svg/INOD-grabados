@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INOD grabados</title>
+
+    <style>
+.whatsapp-flotante {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background: #25D366;
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+    z-index: 1000;
+    transition: 0.2s;
+}
+
+.whatsapp-flotante:hover {
+    transform: scale(1.05);
+}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            color: #222;
+        }
+
+        header {
+            background: #111;
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h2 {
+            font-size: 24px;
+        }
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo {
+    width: 45px;
+    height: 45px;
+    background: white;
+    color: #111;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.marca h2 {
+    margin: 0;
+}
+
+.marca span {
+    font-size: 12px;
+    color: #bbb;
+}
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        .inicio {
+            min-height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .inicio h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            line-height: 1.15;
+        }
+
+        .inicio p {
+            font-size: 20px;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        .boton {
+            display: inline-block;
+            background: #111;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .productos {
+            padding: 60px 8%;
+            text-align: center;
+            background: white;
+        }
+
+        .productos h2 {
+            font-size: 32px;
+            margin-bottom: 40px;
+        }
+
+        .contenedor-productos {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .producto {
+    width: 280px;
+    background: #f2f2f2;
+    padding: 25px;
+    border-radius: 12px;
+    transition: 0.25s;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.producto:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 22px rgba(0,0,0,0.15);
+}
+
+        .foto {
+            height: 200px;
+            background: #ddd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            color: #777;
+        }
+
+        .producto h3 {
+.boton-producto {
+    display: inline-block;
+    margin-top: 20px;
+    background: #111;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.boton-producto:hover {
+    background: #333;
+    transform: translateY(-2px);
+}
+            margin-bottom: 10px;
+        }
+.como-pedir {
+    padding: 70px 8%;
+    text-align: center;
+}
+
+.como-pedir h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.pasos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.paso {
+    background: white;
+    width: 250px;
+    padding: 30px 20px;
+    border-radius: 12px;
+}
+
+.paso h3 {
+    margin-bottom: 15px;
+}
+
+.paso p {
+    color: #555;
+    line-height: 1.5;
+}
+.faq {
+    padding: 70px 8%;
+    background: #f5f5f5;
+    text-align: center;
+}
+
+.faq h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.faq-contenedor {
+    max-width: 900px;
+    margin: auto;
+}
+
+.pregunta {
+    background: white;
+    padding: 25px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    text-align: left;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.pregunta h3 {
+    margin-bottom: 10px;
+}
+
+.pregunta p {
+    color: #555;
+    line-height: 1.6;
+}
+        footer {
+.por-que {
+    padding: 70px 8%;
+    text-align: center;
+    background: #f5f5f5;
+}
+
+.por-que h2 {
+    font-size: 32px;
+    margin-bottom: 40px;   
+}
+
+.por-que-contenedor {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.ventaja {
+    width: 280px;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    transition: 0.25s;
+}
+
+.ventaja:hover {
+    transform: translateY(-5px);
+}
+
+.ventaja h3 {
+    margin-bottom: 15px;
+}
+
+.ventaja p {
+    color: #555;
+    line-height: 1.6;
+}
+.info-compra {
+    padding: 70px 8%;
+    background: white;
+    text-align: center;
+}
+
+.info-compra h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.info-contenedor {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.info-caja {
+    width: 280px;
+    padding: 30px;
+    background: #f5f5f5;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.info-caja h3 {
+    margin-bottom: 15px;
+}
+
+.info-caja p {
+    color: #555;
+    line-height: 1.6;
+}
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        @media (max-width: 700px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .inicio h1 {
+                font-size: 36px;
+            }
+        }
+.por-que {
+    padding: 70px 8%;
+    text-align: center;
+    background: #f5f5f5;
+}
+
+.por-que h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+.por-que-contenedor {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.ventaja {
+    width: 280px;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    transition: 0.25s;
+}
+
+.ventaja:hover {
+    transform: translateY(-5px);
+}
+
+.ventaja h3 {
+    margin-bottom: 15px;
+}
+
+.ventaja p {
+    color: #555;
+    line-height: 1.6;
+}
+.inicio-contenido {
+    max-width: 850px;
+}
+
+.mini-titulo {
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+    color: #777;
+}
+
+.descripcion-inicio {
+    max-width: 650px;
+    margin: 0 auto 30px;
+    line-height: 1.6;
+}
+
+.botones-inicio {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.boton-whatsapp {
+    background: #25D366;
+}
+
+.boton-whatsapp:hover {
+    background: #1ebe5d;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    transition: 0.2s;
+}
+
+nav a:hover {
+    opacity: 0.7;
+}
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="marca">
+    <div class="logo">IN</div>
+
+    <div>
+        <h2>INOD grabados</h2>
+        <span>Grabados personalizados</span>
+    </div>
+</div>
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#productos">Productos</a>
+        <a href="#como-pedir">Cómo pedir</a>
+        <a href="#preguntas">Preguntas</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+</header>
+
+
+<section class="inicio" id="inicio">
+
+    <div class="inicio-contenido">
+
+        <p class="mini-titulo">INOD GRABADOS</p>
+
+        <h1>Detalles personalizados que convierten tus recuerdos en algo especial</h1>
+
+        <p class="descripcion-inicio">
+            Creamos grabados personalizados con fotos, nombres,
+            fechas y diseños especiales para regalar o conservar.
+        </p>
+
+        <div class="botones-inicio">
+
+            <a class="boton" href="#productos">
+                Ver productos
+            </a>
+
+            <a class="boton boton-whatsapp"
+               href="TU-LINK-DE-WHATSAPP"
+               target="_blank">
+                Pedir por WhatsApp
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="productos" id="productos">
+
+    <h2>Nuestros productos</h2>
+
+    <div class="contenedor-productos">
+
+        <div class="producto">
+
+            <div class="foto">
+                Próximamente foto
+            </div>
+
+            <h3>Placa personalizada</h3>
+
+            <p>
+                Personaliza una placa con tu foto, nombre o mensaje especial.
+            </p>
+<a class="boton-producto"
+   href="https://wa.me/51902611921?text=Hola%2C%20quisiera%20consultar%20por%20una%20placa%20personalizada"
+   target="_blank">
+    Consultar por WhatsApp
+</a>
+        </div>
+
+
+        <div class="producto">
+
+            <div class="foto">
+                Próximamente foto
+            </div>
+
+            <h3>Regalos personalizados</h3>
+
+            <p>
+                Diseños ideales para cumpleaños, aniversarios y fechas especiales.
+            </p>
+<a class="boton-producto"
+   href="https://wa.me/51902611921?text=Hola%2C%20quisiera%20consultar%20por%20un%20regalo%20personalizado"
+   target="_blank">
+    Consultar por WhatsApp
+</a>
+        </div>
+
+
+        <div class="producto">
+
+            <div class="foto">
+                Próximamente foto
+            </div>
+
+            <h3>Diseños personalizados</h3>
+
+            <p>
+                Envíanos tu idea y podemos preparar un diseño especialmente para ti.
+            </p>
+<a class="boton-producto"
+   href="https://wa.me/51902611921?text=Hola%2C%20quisiera%20consultar%20por%20un%20dise%C3%B1o%20personalizado"
+   target="_blank">
+    Consultar por WhatsApp
+</a>
+        </div>
+
+    </div>
+
+</section>
+<section class="por-que">
+
+    <h2>¿Por qué elegir INOD?</h2>
+
+    <div class="por-que-contenedor">
+
+        <div class="ventaja">
+            <h3>Diseños personalizados</h3>
+            <p>
+                Cada pedido puede adaptarse con fotos, nombres,
+                fechas o mensajes especiales.
+            </p>
+        </div>
+
+        <div class="ventaja">
+            <h3>Atención directa</h3>
+            <p>
+                Coordinamos contigo por WhatsApp para revisar
+                los detalles antes de realizar el grabado.
+            </p>
+        </div>
+
+        <div class="ventaja">
+            <h3>Hecho con dedicación</h3>
+            <p>
+                Preparamos cada trabajo buscando que el resultado
+                quede limpio y especial para cada cliente.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="como-pedir" id="como-pedir">
+
+    <h2>¿Cómo hacer tu pedido?</h2>
+
+    <div class="pasos">
+
+        <div class="paso">
+            <h3>1. Elige tu diseño</h3>
+            <p>
+                Cuéntanos qué tipo de placa o grabado deseas realizar.
+            </p>
+        </div>
+
+        <div class="paso">
+            <h3>2. Envíanos tu foto</h3>
+            <p>
+                Mándanos por WhatsApp la foto, nombre o mensaje que quieras grabar.
+            </p>
+        </div>
+
+        <div class="paso">
+            <h3>3. Preparamos tu diseño</h3>
+            <p>
+                Revisamos tu pedido y coordinamos contigo los detalles antes de grabarlo.
+            </p>
+        </div>
+
+        <div class="paso">
+            <h3>4. Recibe tu pedido</h3>
+            <p>
+                Coordinamos contigo la entrega de tu grabado personalizado.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+<section class="faq" id="preguntas">
+
+    <h2>Preguntas frecuentes</h2>
+
+    <div class="faq-contenedor">
+
+        <div class="pregunta">
+            <h3>¿Puedo enviar cualquier foto?</h3>
+            <p>
+                Sí. Recomendamos enviar una foto clara y con buena iluminación
+                para obtener un mejor resultado en el grabado.
+            </p>
+        </div>
+
+        <div class="pregunta">
+            <h3>¿Puedo agregar nombres o frases?</h3>
+            <p>
+                Sí. Podemos personalizar el diseño con nombres, fechas,
+                mensajes o frases especiales.
+            </p>
+        </div>
+
+        <div class="pregunta">
+            <h3>¿Cuánto demora un pedido?</h3>
+            <p>
+                El tiempo depende del diseño y la cantidad solicitada.
+                Te confirmaremos el tiempo aproximado por WhatsApp.
+            </p>
+        </div>
+
+        <div class="pregunta">
+            <h3>¿Realizan diseños personalizados?</h3>
+            <p>
+                Sí. Puedes enviarnos tu idea por WhatsApp y coordinamos
+                contigo cómo realizarla.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+<section class="info-compra">
+
+    <h2>Pago y entrega</h2>
+
+    <div class="info-contenedor">
+
+        <div class="info-caja">
+            <h3>Métodos de pago</h3>
+            <p>
+                Coordinamos el pago directamente por WhatsApp.
+                Consulta los métodos disponibles al realizar tu pedido.
+            </p>
+        </div>
+
+        <div class="info-caja">
+            <h3>Entregas</h3>
+            <p>
+                Coordinamos contigo el lugar y la forma de entrega
+                una vez confirmado tu pedido.
+            </p>
+        </div>
+
+        <div class="info-caja">
+            <h3>Pedidos personalizados</h3>
+            <p>
+                Antes de realizar el grabado revisamos contigo
+                los detalles del diseño.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+<a class="whatsapp-flotante"
+   href="https://wa.me/51902611921?text=Hola%2C%20quisiera%20hacer%20una%20consulta"
+   target="_blank">
+    WhatsApp
+</a>
+<footer id="contacto">
+
+    <p>Grabados Láser Personalizados</p>
+
+</footer>
+</body>
+</html>
